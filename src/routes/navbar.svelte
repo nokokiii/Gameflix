@@ -28,6 +28,8 @@
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
+        position: fixed;
+        top: 0;
     }
 
     div.nav-options {
@@ -44,6 +46,7 @@
     }
 
 	div.profile-options {
+        box-sizing: border-box;
         width: 100%;
 		padding: 10px;
 		border: 1px solid #eee;
