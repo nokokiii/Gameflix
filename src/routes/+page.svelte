@@ -1,7 +1,6 @@
 <script>
     import '../app.css';
-    import Component from './component.svelte'
+    import Navbar from './navbar.svelte';
 </script>
 
-
-<Component/>
+<Navbar />
