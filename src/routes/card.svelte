@@ -1,5 +1,13 @@
 <script>
-    // your js code goes here
+    
+    let hovering = false;
+    function enter() {
+		hovering = true;
+	}
+
+	function leave() {
+		hovering = false;
+	}
 </script>
 <style>
    
@@ -7,11 +15,11 @@
   
 
     .card > .info{
-        display: none;
+        /* display: none; */
     }
 
     .card:hover > .info{
-        display: var(--show);
+        /* display: var(--show); */
     }
 
   /* wygląd karty */
@@ -31,10 +39,12 @@
     .card > img{
         width: 100%;
         height: 100%;
+        object-fit: cover;
     }
 
   
     .card > .info{
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
@@ -73,8 +83,10 @@
 <div class="card">
     <img src="/background_cs.jpg" alt="">
     <!-- your html code goes here -->
-    <div class="info">
-        <span>Title</span>
-        <button>See more</button>
+    <div class="info" on:mouseenter={enter} on:mouseleave={leave}>
+        {#if hovering}
+            <span>Title</span>
+            <button>See more</button>
+        {/if}
     </div>
 </div>
