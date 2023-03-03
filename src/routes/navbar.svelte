@@ -37,6 +37,11 @@
         flex-direction: row;
     }
 
+    div.nav-options > div.search {
+        display: flex;
+        flex-direction: row;
+    }
+
     div.profile {
         width: 200px
     }
@@ -73,15 +78,15 @@
     <div class="nav-options">
         <!-- search -->
         <!-- Pojawia się input(text), ale pojawia się podspodem. Do naprawienia i ostylizownia -->
-        <div>
+        <div class="search">
             <button on:click={showSearchbar}>
                 <img src="" alt="Search">
             </button>
-                {#if isSearchbar}
-                <div class="searchbar" transition:slide|local>
-                    <input type="text">
-                </div>
-                {/if}
+            {#if isSearchbar}
+            <div class="searchbar" transition:slide|local>
+                <input type="text" placeholder="Search...">
+            </div>
+            {/if}
         </div>
         <!-- Notifications -->
         <!-- pokliknięciu pojawiają się notyfikacje (np. odpiwedzi na komentrze etc.) -->
