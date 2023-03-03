@@ -8,13 +8,13 @@
     </div>
 
     <div>
-        <a href="">Main Page</a>
-        <a href="">Popular</a>
-        <a href="">Adventure games</a>
-        <a href="">FPS games</a>
-        <a href="">RPG games</a>
-        <a href="">Strategy games</a>
-        <a href="">Sport games</a>
+       <button>Main Page</button>
+       <button>Popular</button>
+       <button>Adventure games</button>
+       <button>FPS games</button>
+       <button>RPG games</button>
+       <button>Strategy games</button>
+       <button>Sport games</button>
     </div>
 
     <div>
