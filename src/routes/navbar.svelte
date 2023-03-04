@@ -44,7 +44,8 @@
     <!-- search -->
     <div class="search">
       <button on:click={showSearchbar}>
-        <img src="/search.png"/> <!-- Nie dopisywać alt. Aby nie psuć wyglądu wrazie nie wczytania się ikony -->
+        <img src="/search.png" />
+        <!-- Nie dopisywać alt. Aby nie psuć wyglądu wrazie nie wczytania się ikony -->
       </button>
       {#if isSearchbar}
         <div class="searchbar" transition:slide|local>
@@ -68,7 +69,7 @@
       {#if showItems}
         {#each items.slice(0, i) as item}
           <div class="profile-options" transition:slide|local>
-            <a href="." >{item}</a>
+            <a href=".">{item}</a>
           </div>
         {/each}
       {/if}
@@ -79,6 +80,7 @@
 <style>
   nav {
     width: 100vw;
+    height: 68px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -90,7 +92,12 @@
 
   div.nav-options {
     display: flex;
-    flex-direction: row;
+    flex-grow: 1;
+    height: 100%;
+    justify-content: flex-end;
+    position: absolute;
+    right: 4%;
+    top: 0;
   }
 
   div.nav-options > div.search {
@@ -99,7 +106,7 @@
   }
 
   div.profile {
-    width: 200px;
+    width: auto;
   }
 
   div.profile > button {
