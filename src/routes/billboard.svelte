@@ -12,7 +12,7 @@
 
   .billboard {
     width: 100%;
-    height: 60vh;
+    height: 90vh;
     background-color: #f1f1f1;
     display: flex;
     flex-direction: row;
