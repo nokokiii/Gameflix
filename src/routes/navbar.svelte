@@ -54,7 +54,7 @@
     </div>
     <!-- Notifications -->
     <!-- pokliknięciu pojawiają się notyfikacje (np. odpiwedzi na komentrze etc.) -->
-    <div>
+    <div class="notifications">
       <button>
         <img src="/notifications.png" />
       </button>
@@ -68,7 +68,7 @@
       {#if showItems}
         {#each items.slice(0, i) as item}
           <div class="profile-options" transition:slide|local>
-            <a href=".">{item}</a>
+            <a href="." >{item}</a>
           </div>
         {/each}
       {/if}
