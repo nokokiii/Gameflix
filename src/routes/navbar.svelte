@@ -106,7 +106,8 @@
   }
 
   div.profile {
-    width: auto;
+    display: flex;
+    flex-direction: column;
   }
 
   div.profile > button {
