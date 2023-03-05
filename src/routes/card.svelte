@@ -1,5 +1,13 @@
 <script>
-    // your js code goes here
+    let isHover = false;
+   
+    function showInfo() {
+        if (isHover == true) {
+            isHover = false;
+        } else {
+            isHover = true;
+        }
+    }
 </script>
 <style>
    
@@ -35,6 +43,7 @@
 
   
     .card > .info{
+        display: none;
         top: 0;
         left: 0;
         width: 100%;
@@ -74,7 +83,9 @@
     <img src="/background_cs.jpg" alt="">
     <!-- your html code goes here -->
     <div class="info">
-        <span>Title</span>
-        <button>See more</button>
+        {#if isHover}
+            <span>Title</span>
+            <button>See more</button>
+        {/if}
     </div>
 </div>

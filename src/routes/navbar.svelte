@@ -1,10 +1,10 @@
 <script>
-	import { slide } from 'svelte/transition';
+	import { fade,slide } from 'svelte/transition';
 
 	let showItems = false;
     let isSearchbar = false;
-	let i = 5;
 	let items = ['profile', 'settings', 'Sign In'];
+    let itemsLen = items.length
 
     function showProfileOptions() {
         if (showItems == true) {
@@ -24,7 +24,7 @@
 </script>
 
 <style>
-    nav {
+    nav {   
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -83,7 +83,7 @@
                 <img src="" alt="Search">
             </button>
             {#if isSearchbar}
-            <div class="searchbar" transition:slide|local>
+            <div class="searchbar" transition:fade|local>
                 <input type="text" placeholder="Search...">
             </div>
             {/if}
@@ -102,7 +102,7 @@
                 <img src="" alt="Profile">
             </button>
             {#if showItems}
-            {#each items.slice(0, i) as item}
+            {#each items.slice(0, itemsLen) as item}
             <div class="profile-options" transition:slide|local>
                 {item}
             </div>
